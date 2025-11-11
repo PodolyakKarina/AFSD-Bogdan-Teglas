@@ -19,3 +19,14 @@ def sumacif(n):
             n//=10
     print (f"Suma cifrelor lui {c} este {s}")
 sumacif(1234)
+#Produs scalar
+def produs_scalar(v1: list[float], v2: list[float]) -> str:
+  if len(v1) != len(v2):
+      return "Eroare"
+  produs=0
+  for i in range(len(v1)):
+      produs += v1[i] * v2[i]
+  return "Produsul scalar este", produs
+v1 = [1, 2, 3]
+v2 = [4, 5, 6]
+print(produs_scalar(v1, v2))
