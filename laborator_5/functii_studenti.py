@@ -3,7 +3,7 @@ def filtreaza_pare(lista):
     ok=0
     for numar in lista:
         if numar%2!=0:
-            lista.remove(numar)
+            lista.pop(numar)
         if numar%2==0:
             ok=1
     if ok==0:
@@ -32,4 +32,16 @@ def medie_ponderata(valori: list[float], ponderi: list[float]):
     suma_ponderi = sum(ponderi)
     if suma_ponderi == 0:
         return print("error ponderea este 0")
+
+#Produs scalar
+def produs_scalar(v1: list[float], v2: list[float]) -> str:
+  if len(v1) != len(v2):
+      return "Eroare"
+  produs=0
+  for i in range(len(v1)):
+      produs += v1[i] * v2[i]
+  return "Produsul scalar este", produs
+v1 = [1, 2, 3]
+v2 = [4, 5, 6]
+print(produs_scalar(v1, v2))
         
